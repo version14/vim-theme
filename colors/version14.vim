@@ -11,35 +11,35 @@ let &background = s:style ==# 'light' ? 'light' : 'dark'
 
 if has('termguicolors') | set termguicolors | endif
 
-" ── Dark palette ─────────────────────────────────────────────────────────────
+" ── Dark palette (v0.4.1 regrade) ─────────────────────────────────────────────
 if s:style ==# 'dark'
   let [s:bg_dark, s:bg, s:bg0, s:bg1, s:bg2, s:bg3, s:bg4] =
-    \ ['#08090A', '#14171B', '#0E1012', '#1A1E23', '#23262B', '#2E3238', '#505560']
+    \ ['#08090B', '#14171B', '#0E1012', '#1A1E23', '#1A1E23', '#22272D', '#4E5660']
   let [s:fg, s:fg1, s:fg2, s:fg3] =
-    \ ['#F2F4F6', '#9CA0A6', '#6E737A', '#505560']
+    \ ['#F2F4F6', '#9CA0A6', '#6E737A', '#4E5660']
   let [s:accent, s:accent2, s:blue, s:green, s:yellow, s:red] =
-    \ ['#D2FF3A', '#B8E625', '#6FB1FF', '#4ADE80', '#FFB347', '#FF5C5C']
+    \ ['#B7A2FF', '#ED8EF3', '#78AFFF', '#4BDE7F', '#FFA85E', '#FF5C59']
   let [s:selection, s:active_line, s:bracket_bg, s:read_bg, s:write_bg] =
-    \ ['#323B20', '#1B1E22', '#262D1E', '#25282C', '#2E3135']
+    \ ['#2E2D3F', '#1B1E22', '#232430', '#25282C', '#2E3135']
   let [s:diff_add, s:diff_change, s:diff_delete] =
-    \ ['#1E3128', '#1D2B3A', '#341F20']
+    \ ['#1B3128', '#212B39', '#332023']
   let [s:git_add, s:git_change, s:git_delete] =
-    \ ['#4ADE80', '#6FB1FF', '#FF5C5C']
+    \ ['#4BDE7F', '#78AFFF', '#FF5C59']
 
-" ── Light palette ─────────────────────────────────────────────────────────────
+" ── Light palette (v0.4.1 regrade) ────────────────────────────────────────────
 else
   let [s:bg_dark, s:bg, s:bg0, s:bg1, s:bg2, s:bg3, s:bg4] =
-    \ ['#F7F8F9', '#E8EAED', '#EFF1F3', '#F7F8F9', '#D0D4D9', '#BFC4CA', '#767B82']
+    \ ['#DADBDC', '#EBEDEF', '#E3E5E6', '#F4F5F6', '#D2D4D7', '#C5C7CA', '#999FA7']
   let [s:fg, s:fg1, s:fg2, s:fg3] =
-    \ ['#0D0F11', '#555A61', '#636870', '#767B82']
+    \ ['#0D0F11', '#535960', '#787E86', '#999FA7']
   let [s:accent, s:accent2, s:blue, s:green, s:yellow, s:red] =
-    \ ['#4E6600', '#566E0C', '#1B4FCC', '#166534', '#92400E', '#B91C1C']
+    \ ['#5F3BBB', '#8C2293', '#0054CB', '#166534', '#8F4400', '#B91A25']
   let [s:selection, s:active_line, s:bracket_bg, s:read_bg, s:write_bg] =
-    \ ['#D0D6C8', '#E2E4E8', '#D3D9CE', '#D4D7DA', '#CBCDD1']
+    \ ['#D5D1E7', '#E2E5E9', '#D9D6E8', '#D7DADC', '#CDCFD2']
   let [s:diff_add, s:diff_change, s:diff_delete] =
-    \ ['#CDD9D5', '#CDD6E9', '#E2CFD2']
+    \ ['#CFDBD7', '#CCD9EA', '#E4D2D5']
   let [s:git_add, s:git_change, s:git_delete] =
-    \ ['#166634', '#1B4FCC', '#B91C1C']
+    \ ['#166534', '#0054CB', '#B91A25']
 endif
 
 " ── Helper ───────────────────────────────────────────────────────────────────
