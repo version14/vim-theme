@@ -42,6 +42,28 @@ else
     \ ['#166534', '#0054CB', '#B91A25']
 endif
 
+" ── ANSI slots 0-15 for :terminal ────────────────────────────────────────────
+" Vim's built-in terminal reads g:terminal_ansi_colors, not the highlight
+" groups below, so without this it ignores the colorscheme entirely.
+" Slots 0 and 8 come from the TEXT ramp (disabled / subtle), never from the
+" elevation ramp -- filling them with border colours is what made shell
+" autosuggestions invisible. See color-palette.md, "ANSI slot mapping".
+" Light's slot 8 is #636870 rather than s:fg2 (#787E86): that is the value the
+" rest of the suite already uses for light secondary text.
+if s:style ==# 'dark'
+  let g:terminal_ansi_colors = [
+    \ '#4E5660', '#FF5C59', '#4BDE7F', '#FFA85E',
+    \ '#78AFFF', '#ED8EF3', '#B7A2FF', '#9CA0A6',
+    \ '#6E737A', '#FF5C59', '#4BDE7F', '#FFA85E',
+    \ '#78AFFF', '#ED8EF3', '#B7A2FF', '#F2F4F6' ]
+else
+  let g:terminal_ansi_colors = [
+    \ '#999FA7', '#B91A25', '#166534', '#8F4400',
+    \ '#0054CB', '#8C2293', '#5F3BBB', '#535960',
+    \ '#636870', '#B91A25', '#166534', '#8F4400',
+    \ '#0054CB', '#8C2293', '#5F3BBB', '#0D0F11' ]
+endif
+
 " ── Helper ───────────────────────────────────────────────────────────────────
 function! s:hi(group, fg, bg, ...) abort
   let l:cmd = 'hi ' . a:group
